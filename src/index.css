@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #8b5cf6;
+  --color-primary-dark: #7c3aed;
+  --color-secondary: #ec4899;
+  --color-dark-bg: #0B0C10;
+  --color-dark-surface: #15171C;
+  --color-light-bg: #f8fafc;
+  --color-light-surface: #ffffff;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: white;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a38;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a48;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background-color: rgba(21, 23, 28, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 32, 40, 0.5);
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Input dark styling */
+input, textarea, select {
+  background-color: #1C1E26 !important;
+  border-color: #2a2a38 !important;
+  color: white !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #8b5cf6 !important;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+/* Dark card styling */
+.dark-card {
+  background-color: #15171C;
+  border: 1px solid #1E2028;
+  border-radius: 16px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #12141A;
+  border-right: 1px solid #1E2028;
+}
+
+.sidebar-item {
+  color: #8B8DA3;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #1C1E26;
+  color: white;
+}
+
+.sidebar-item.active {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));
+  color: white;
+  border-left: 3px solid #8b5cf6;
+}
+
+/* Navigation styling */
+.nav-dark {
+  background-color: #12141A;
+  border-bottom: 1px solid #1E2028;
+}
+
+/* Button gradient */
+.btn-gradient {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Search input dark */
+.search-dark {
+  background-color: #1C1E26 !important;
+  border: 1px solid #2a2a38 !important;
+  color: white !important;
+}
+
+.search-dark:focus {
+  border-color: #8b5cf6 !important;
+}
+
+/* Badge styling */
+.badge {
+  background-color: #1C1E26;
+  border: 1px solid #2a2a38;
+  color: #8B8DA3;
+}
+
+/* Modal/Popup dark */
+.modal-dark {
+  background-color: #15171C;
+  border: 1px solid #1E2028;
+}
+
+/* Progress bar */
+.progress-bar {
+  background-color: #2a2a38;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+}
+
+/* Status badge colors */
+.status-upcoming {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.status-planning {
+  background-color: rgba(236, 72, 153, 0.2);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Text colors */
+.text-muted {
+  color: #6B7280;
+}
+
+.text-light {
+  color: #9CA3AF;
+}
+
+/* Root element for React */
+#root {
+  min-height: 100vh;
+}
